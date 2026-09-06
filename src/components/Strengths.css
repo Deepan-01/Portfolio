@@ -1,0 +1,55 @@
+.strengths__grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 18px;
+  max-width: 900px;
+}
+
+.strength-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  padding: 28px 16px;
+  text-align: center;
+  cursor: default;
+}
+
+.strength-card__icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(99,102,241,0.15), rgba(139,92,246,0.15));
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--blue-light);
+  transition: all 0.25s;
+}
+
+.strength-card:hover .strength-card__icon {
+  background: var(--grad-primary);
+  color: #fff;
+  box-shadow: 0 0 20px rgba(99, 102, 241, 0.4);
+  border-color: transparent;
+}
+
+.strength-card__label {
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  line-height: 1.3;
+}
+
+@media (max-width: 900px) {
+  .strengths__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .strengths__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

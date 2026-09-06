@@ -1,0 +1,145 @@
+.timeline {
+  position: relative;
+  max-width: 860px;
+}
+
+.timeline__item {
+  position: relative;
+  padding-left: 56px;
+}
+
+.timeline__line {
+  position: absolute;
+  left: 19px;
+  top: 48px;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--blue), transparent);
+}
+
+.timeline__dot {
+  position: absolute;
+  left: 0;
+  top: 28px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--grad-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  box-shadow: 0 0 20px rgba(99, 102, 241, 0.4);
+  z-index: 1;
+}
+
+.timeline__card {
+  padding: 32px;
+  margin-bottom: 32px;
+}
+
+.exp-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-bottom: 0;
+}
+
+.exp-card__company-wrap {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.exp-card__company-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  background: rgba(99, 102, 241, 0.12);
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--blue-light);
+}
+
+.exp-card__company {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.exp-card__type {
+  font-size: 0.75rem;
+  font-family: var(--font-mono);
+  color: var(--blue-light);
+  background: rgba(99, 102, 241, 0.1);
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  border-radius: 100px;
+  padding: 3px 10px;
+}
+
+.exp-card__meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+}
+
+.exp-card__role {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--purple-light);
+}
+
+.exp-card__duration {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+}
+
+.exp-card__divider {
+  height: 1px;
+  background: var(--border);
+  margin: 20px 0;
+}
+
+.exp-card__responsibilities {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.responsibility-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  color: var(--text-secondary);
+  font-size: 0.93rem;
+  line-height: 1.6;
+}
+
+.responsibility-icon {
+  color: var(--blue-light);
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+@media (max-width: 600px) {
+  .exp-card__header {
+    flex-direction: column;
+  }
+  .exp-card__meta {
+    align-items: flex-start;
+  }
+  .timeline__item {
+    padding-left: 44px;
+  }
+}
